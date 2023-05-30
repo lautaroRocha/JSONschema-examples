@@ -1,0 +1,58 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",      
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "number",                                    
+        "min" : 4,                                       
+        "data" : {                                             
+          "title" : "name",                           
+          "label" : "Nombre *",                       
+          "placeholder": "Escribe tu nombre",         
+          "type" : "input",                           
+          "options" : [],                             
+          "default" : ""                              
+        },
+        "errMessages" : {                                      
+          "required" : "Este campo no puede quedar vacío",
+          "min" : "Este campo debe tener como mínimo 4 carácteres"
+        }      },
+      "lastName": {
+        "type": "string",
+        "data" : {
+          "title" : "lastName",
+          "label" : "Apellido *",
+          "placeholder" : "Ingresa tu apellido",
+          "type" : "input",
+          "options" : [],
+        "default" : ""
+        },
+        "errMessages" : {
+          "required" : "Este campo no puede quedar vacío"
+        }
+      },
+      "hobby": {
+        "type": "string",
+        "data" : {
+          "title" : "hobby",
+          "label" : "Hobby *",
+          "placeholder" : "Seleccione un hobby",
+          "type" : "select",
+          "options" : [
+            {"label":"Selecciona una opción", "value":""},
+            {"label":"Ciclismo", "value":"ciclismo"}, 
+            {"label":"Montañismo", "value":"montañismo"}, 
+            {"label": "Informática", "value": "informática"}],
+          "default" : ""
+        },
+        "errMessages" : {
+          "required" : "Este campo no puede quedar vacío"
+        }
+      }
+    },
+    "required": [                                               
+      "name",
+      "lastName",
+      "hobby"
+    ]
+  }
