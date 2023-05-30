@@ -3,8 +3,8 @@
     "type": "object",
     "properties": {
       "name": {
-        "type": "number",                                    
-        "min" : 4,                                       
+        "type": "string",                                    
+        "min" : "4",                                       
         "data" : {                                             
           "title" : "name",                           
           "label" : "Nombre *",                       
