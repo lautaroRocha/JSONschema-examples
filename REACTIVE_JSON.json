@@ -1,0 +1,37 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "sucursal": {
+        "type": "string",
+        "data" : {
+          "title" : "sucursal",
+          "label" : "¿Qué sucursal se encarga de esto?",
+          "placeholder": "",
+          "type" : "select",
+          "options" : [
+            {"label":"Talcahuano", "value":"1"},
+            {"label":"Mario Bravo", "value":"2"}, 
+            {"label":"Mogotes", "value":"3"}], 
+          "default" : ""
+        }
+        },
+      "caja": {
+        "type" : "string",
+        "data": {
+          "dependentOn" : "sucursal",
+          "title" : "caja",
+          "label" : "¿Qué caja quiere revisar? * (esta opción reaccionará a los cambios en la acción anterior, que está indicada como su dependencia)",
+          "placeholder": "",
+          "type" : "select",
+          "options" : "http://localhost:1591/",
+          "default" : ""
+        },
+        "errMessages" : {
+          "required" : "Debes seleccionar una caja"
+        }
+      }
+      },
+    "required" : ["caja"]
+  }
+  
