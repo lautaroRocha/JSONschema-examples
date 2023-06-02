@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "empresa": {
+      "type": "string",
+      "data": {
+        "title": "empresa",
+        "label": "Empresa *",
+        "placeholder": "",
+        "type": "select",
+        "options": [
+          {
+            "label": "Empresa 1",
+            "value": "emp1"
+          },
+          {
+            "label": "Empresa 2",
+            "value": "emp2"
+          },
+          {
+            "label": "Empresa 3",
+            "value": "emp3"
+          }
+        ],
+        "default": ""
+      },
+      "errMessages": {
+        "required": "Este campo no puede quedar vacío"
+      }
+    },
+    "sucursal": {
+      "type": "string",
+      "data": {
+        "dependentOn": "empresa",
+        "title": "sucursal",
+        "label": "Sucursal *",
+        "placeholder": "",
+        "type": "select",
+        "options": "http://localhost:7000",
+        "default": ""
+      },
+      "errMessages": {
+        "required": "Este campo no puede quedar vacío"
+      }
+    },
+    " puntodeventa": {
+      "type": "string",
+      "data": {
+        "dependentOn": "sucursal",
+        "title": "puntodeventa",
+        "label": "Punto de venta *",
+        "placeholder": "",
+        "type": "select",
+        "options": "http://localhost:7000",
+        "default": ""
+      },
+      "errMessages": {
+        "required": "Este campo no puede quedar vacío"
+      }
+    },
+    "deposito": {
+      "type": "string",
+      "data": {
+        "dependentOn": "puntodeventa",
+        "title": "deposito",
+        "label": "Depósito *",
+        "placeholder": "",
+        "type": "select",
+        "options": "http://localhost:7000",
+        "default": ""
+      },
+      "errMessages": {
+        "required": "Este campo no puede quedar vacío"
+      }
+    }
+  },
+  "required": [
+    "empresa",
+    "puntodeventa",
+    "deposito"
+  ]
+}
